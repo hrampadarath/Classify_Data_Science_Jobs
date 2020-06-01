@@ -1,0 +1,7 @@
+"0","```r
+# get links xpath
+links <- page %>% 
+  rvest::html_nodes(\"div\") %>%
+  rvest::html_nodes(xpath = '//*[@data-tn-element=\"jobTitle\"]') %>%
+  rvest::html_attr(\"href\")
+```"

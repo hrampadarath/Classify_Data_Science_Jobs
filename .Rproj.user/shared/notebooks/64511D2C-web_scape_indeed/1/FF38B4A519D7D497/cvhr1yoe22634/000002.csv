@@ -1,0 +1,2 @@
+"0","url <- ""https://www.indeed.co.uk/jobs?q=data%20scientist&l=Bristol"""
+"0","page <- xml2::read_html(url)"

@@ -1,0 +1,7 @@
+"0","```r
+#get the job title
+  job_title <- page %>% 
+    rvest::html_nodes(\"div\") %>%
+    rvest::html_nodes(xpath = '//*[@data-tn-element = \"jobTitle\"]') %>%
+    rvest::html_attr(\"title\")
+```"

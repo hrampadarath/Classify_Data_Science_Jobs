@@ -1,0 +1,56 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+library(rvest)
+library(xml2)
+```
+
+```{r}
+url <- "https://www.indeed.co.uk/jobs?q=data%20scientist&l=Bristol"
+page <- xml2::read_html(url)
+```
+
+
+
+```{r}
+#get the job title
+  job_title <- page %>% 
+    rvest::html_nodes("div") %>%
+    rvest::html_nodes(xpath = '//*[@data-tn-element = "jobTitle"]') %>%
+    rvest::html_attr("title") %>%
+    print()
+
+```
+
+```{r}
+# get links xpath
+links <- page %>% 
+  rvest::html_nodes("div") %>%
+  rvest::html_nodes(xpath = '//*[@data-tn-element="jobTitle"]') %>%
+  rvest::html_attr("href")
+```
+
+
+```{r}
+links[1]
+```
+
+```{r}
+url_jd <- paste0("https://www.indeed.co.uk",links[2])
+page_jd <- xml2::read_html(url_jd)
+# get job description xpath
+page_jd %>%
+  rvest::html_nodes("span")  %>% 
+  rvest::html_nodes(xpath = '//*[@class="jobsearch-jobDescriptionText"]') %>% 
+  rvest::html_text() %>%
+  stringi::stri_trim_both()
+```
+
+```{r}
+
+```
+

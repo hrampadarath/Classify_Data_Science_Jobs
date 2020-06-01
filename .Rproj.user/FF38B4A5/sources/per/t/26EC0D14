@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1590503510553.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3624193471",
+    "id" : "26EC0D14",
+    "lastKnownWriteTime" : 1590503475,
+    "last_content_update" : 1590575691420,
+    "path" : "~/PythonML/DS_Job_class/web_scape_indeed.Rmd",
+    "project_path" : "web_scape_indeed.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline",
+        "cursorPosition" : "47,69",
+        "scrollLine" : "38"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
